@@ -1,11 +1,8 @@
-import { isEmpty } from './isEmpty';
+import { isEmpty } from './';
 
 describe('isEmpty', () => {
   it('must return true on empty string', () => {
     expect(isEmpty('')).toEqual(true);
-  });
-  it('must return true on NaN', () => {
-    expect(isEmpty(Number.NaN)).toEqual(true);
   });
   it('must return true on null', () => {
     expect(isEmpty(null)).toEqual(true);

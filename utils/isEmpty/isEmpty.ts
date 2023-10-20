@@ -1,8 +1,7 @@
-function empty(value) {
+function empty(value: any): boolean {
   return (typeof value === 'string' && !value.trim())
     || typeof value === 'undefined'
-    || value === null
-    || Number.isNaN(value);
+    || value === null;
 }
 
 /**
@@ -11,14 +10,17 @@ function empty(value) {
  *
  * @example
  * isEmpty('') -> true
+ * isEmpty(null) -> true
+ * isEmpty(undefined) -> true
+ * isEmpty('', null) -> true
  * isEmpty(0) -> false
- * isEmpty('', null, 'qwerty') -> false
+ * isEmpty('', 'xxx') -> false
  *
  * @param {*} args
  * @returns {boolean}
  * @throws Error
  */
-export function isEmpty(...args) {
+export function isEmpty(...args: any[]): boolean {
   if (!args.length) {
     throw new Error('You must provide at least one argument');
   }
