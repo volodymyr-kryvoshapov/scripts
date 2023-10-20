@@ -1,4 +1,4 @@
-import { isEmpty } from './';
+import { isEmpty } from './isEmpty';
 
 describe('isEmpty', () => {
   it('must return true on empty string', () => {
